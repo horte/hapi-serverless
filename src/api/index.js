@@ -23,10 +23,8 @@ exports.handler = (event, context, callback) => {
       server.inject(options, function (res) {
         const headers = Object.assign(
           {},
-          res.headers,
           {
             'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Credentials': true,
             'Access-Control-Allow-Methods': 'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'
           }
         )
